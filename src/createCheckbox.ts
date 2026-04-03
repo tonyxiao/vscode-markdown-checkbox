@@ -11,7 +11,7 @@ export const createCheckbox = async (editor: TextEditor) => {
   }
 };
 
-const createCheckboxOfLine = (
+export const createCheckboxOfLine = (
   editor: TextEditor,
   line: TextLine
 ): Thenable<boolean> => {

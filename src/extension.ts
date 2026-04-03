@@ -3,6 +3,7 @@ import { CheckboxStatus, CheckboxStatusController } from './checkboxStatus';
 import { createCheckboxCommand } from './commands/createCheckbox';
 import { markCheckboxCommand } from './commands/markCheckbox';
 import { showQuickPickCommand } from './commands/quickPick';
+import { cycleCheckboxCommand } from './commands/cycleCheckbox';
 
 export const activate = (context: vscode.ExtensionContext) => {
   // item in the status bar to show checkbox information
@@ -16,7 +17,8 @@ export const activate = (context: vscode.ExtensionContext) => {
   context.subscriptions.push(
     markCheckboxCommand,
     createCheckboxCommand,
-    showQuickPickCommand
+    showQuickPickCommand,
+    cycleCheckboxCommand
   );
 };
 

@@ -48,7 +48,8 @@
   "activationEvents": [
     "onLanguage:markdown",
     "onCommand:markdown-checkbox.createCheckbox",
-    "onCommand:markdown-checkbox.markCheckbox"
+    "onCommand:markdown-checkbox.markCheckbox",
+    "onCommand:markdown-checkbox.cycleCheckbox"
   ],
   "icon": "logo.png",
   "galleryBanner": {
@@ -71,6 +72,10 @@
       {
         "command": "markdown-checkbox.showQuickPick",
         "title": "Markdown: Pick checkboxes"
+      },
+      {
+        "command": "markdown-checkbox.cycleCheckbox",
+        "title": "Markdown: Cycle checkbox"
       }
     ],
     "keybindings": [
@@ -84,6 +89,12 @@
         "command": "markdown-checkbox.markCheckbox",
         "key": "ctrl+shift+enter",
         "mac": "cmd+shift+enter",
+        "when": "editorTextFocus && resourceLangId == markdown"
+      },
+      {
+        "command": "markdown-checkbox.cycleCheckbox",
+        "key": "ctrl+enter",
+        "mac": "cmd+enter",
         "when": "editorTextFocus && resourceLangId == markdown"
       }
     ],
