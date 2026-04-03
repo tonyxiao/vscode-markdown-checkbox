@@ -44,8 +44,19 @@ The QuickPick can be opened either from the command palette or by clicking on th
 | ----------------- | ----------------------------------------------------- | ---------------------------------------------- |
 | Create a checkbox | <kbd>CTRL</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd>     | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>c</kbd>     |
 | Toggle checkbox   | <kbd>CTRL</kbd> + <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>Enter</kbd> |
+| Cycle checkbox    | <kbd>CTRL</kbd> + <kbd>Enter</kbd>                    | <kbd>⌘</kbd> + <kbd>Enter</kbd>                 |
 
 These are the initial keyboard shortcuts, which can be customized by the [Keyboard Shortcuts](https://code.visualstudio.com/docs/getstarted/keybindings) settings in VS Code.
+
+## TaskNotes Compatibility
+
+This fork adds a **Cycle checkbox** command (`Cmd+Enter` / `Ctrl+Enter`) that cycles a line through three states:
+
+```
+no checkbox  →  - [ ] task  →  - [x] task  →  (removed)
+```
+
+This makes it easy to use alongside [TaskNotes](https://tasknotes.dev), which reads standard markdown checkboxes from your notes. Both the concise and extended inline task forms are supported — the cycle command operates only on the `[ ]` / `[x]` marker and leaves the rest of the line (metadata, tags, dates, etc.) untouched.
 
 ## Configuration
 
